@@ -142,8 +142,6 @@
                     </div>
                 </div>
 
-
-
                 <div class="card flex align-items-center col-12 sm:col md:col-4 lg:col gap-3 p-2">
                     <div class="service__logo flex align-items-center justify-content-center">
                         <i class="devicon-python-plain colored" style="font-size: 2rem;"></i>
@@ -153,13 +151,8 @@
                     </div>
                 </div>
 
-
-
-
             </div>
         </section>
-
-
 
         <!--CUADERNO -->
         <section id="portfolio" class="portfolio min-h-full w-full pb-8 pt-8">
@@ -170,20 +163,19 @@
                 </p>
             </div>
             <div class="portfolio__gallery">
+
                 <div class="gallery__categories mb-5 mt-5">
                     <ul class="flex list-none flex-wrap justify-content-center gap-3">
                         <li class="filter-item active" data-filter="all">Todos</li>
-                        <li class="filter-item" data-filter="semana_1">Semana 1</li>
+                        <!-- <li class="filter-item" data-filter="semana_1">Semana 1</li>
                         <li class="filter-item" data-filter="semana_2">Semana 2</li>
                         <li class="filter-item" data-filter="semana_3">Semana 3</li>
                         <li class="filter-item" data-filter="semana_4">Semana 4</li>
                         <li class="filter-item" data-filter="semana_5">Semana 5</li>
                         <li class="filter-item" data-filter="semana_6">Semana 6</li>
-                        <li class="filter-item" data-filter="semana_7">Semana 7</li>
+                        <li class="filter-item" data-filter="semana_7">Semana 7</li> -->
                     </ul>
                 </div>
-
-        
 
                 <div class="proyect__gallery flex justify-content-center align-items-center flex-wrap gap-3">
                     <div class="project__card semana_1">
@@ -259,10 +251,6 @@
             </div>
         </section>
 
-
-
-
-
         <!--FOOTER -->
         <footer id="contact" class="min-h-full w-full flex grid col-12 justify-content-center pb-8 pt-8 lg:text-center">
             <div class="social__media col-12 md:col-4 flex flex-column justify-content-between">
@@ -308,7 +296,199 @@
         </footer>
     </div>
 
+    <div id="weekModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="modal-week-title" class="text-2xl font-bold mb-4"></div>
+            <ul id="modal-week-body" class="list-disc pl-5 space-y-2 text-sm text-white"></ul>
+        </div>
+    </div>
+
+
 </body>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const weekContent = {
+    semana_1: {
+      title: "Semana 1",
+      logo: "./assets/semana1.png",
+      items: [
+        {
+          section: "Describir temas aprendidos con sus propias palabras",
+          content:
+            `Durante esta semana se abordaron los fundamentos de las tecnologías web. Se exploraron conceptos clave como sistema web, aplicación web, sitio web y página web, según la clasificación propuesta por Tim Berners-Lee (<a href="https://www.w3.org/" target="_blank">W3C, 2023</a>). También se revisó el funcionamiento del internet mediante el modelo cliente-servidor y protocolos como DNS, TCP/IP y HTTP (<a href="https://datatracker.ietf.org/doc/html/rfc2616" target="_blank">RFC 2616</a>). Se identificaron los roles esenciales en el desarrollo: frontend, backend y fullstack.`
+        },
+        {
+          section: "Ejercicios de laboratorio - Resultados",
+          content:
+            `Se instaló Visual Studio Code (VSC), configurando extensiones como Live Server, Prettier y GitLens. Se practicaron atajos de teclado y navegación por la interfaz. Fuente: <a href="https://learn.microsoft.com/es-es/visualstudio/" target="_blank">Microsoft Docs</a>.`
+        },
+        {
+          section: "Reflexión",
+          content:
+            `¿Qué aprendí?: A diferenciar tipos de soluciones web y el funcionamiento del modelo cliente-servidor.\n¿Cómo aprendí?: Mediante exposiciones, uso del aula virtual, VSC y documentación oficial (<a href="https://www.w3.org/" target="_blank">W3C</a>, <a href="https://learn.microsoft.com/" target="_blank">Microsoft</a>).`
+        }
+      ]
+    },
+    semana_2: {
+      title: "Semana 2",
+      logo: "./assets/semana2.png",
+      items: [
+        {
+          section: "Describir temas aprendidos con sus propias palabras",
+          content: `Se profundizó en la estructura de HTML5 y XML. Se explicó el DOM (Document Object Model) y su papel en el renderizado. También se abordó el SEO técnico y compatibilidad entre navegadores (<a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a>).`
+        },
+        {
+          section: "Ejercicios de laboratorio - Resultados",
+          content: `Se construyó una página básica con etiquetas semánticas. Se aplicaron estilos con CSS (flexbox, grid), usando unidades relativas y absolutas. Fuente: <a href="https://www.w3.org/Style/CSS/" target="_blank">W3C CSS WG</a>.`
+        },
+        {
+          section: "Reflexión",
+          content: `¿Qué aprendí?: A crear una estructura semántica y aplicar estilos responsivos.\n¿Cómo aprendí?: Por medio de práctica guiada y lectura en <a href="https://developer.mozilla.org/" target="_blank">MDN</a>.`
+        }
+      ]
+    },
+    semana_3: {
+      title: "Semana 3",
+      logo: "./assets/semana3.png",
+      items: [
+        {
+          section: "Describir temas aprendidos con sus propias palabras",
+          content: `Se exploraron las librerías <a href="https://getbootstrap.com/" target="_blank">Bootstrap 5</a> y <a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a>. Bootstrap facilita el uso de componentes prediseñados, mientras que Tailwind permite un control preciso mediante clases utilitarias.`
+        },
+        {
+          section: "Ejercicios de laboratorio - Resultados",
+          content: `Se desarrollaron páginas con ambas librerías, aplicando layouts, estilos y componentes. Se comparó la eficiencia entre ambas metodologías.`
+        },
+        {
+          section: "Reflexión",
+          content: `¿Qué aprendí?: A crear interfaces modernas con herramientas populares del frontend.\n¿Cómo aprendí?: A través de prácticas guiadas, documentación oficial y discusión colaborativa.`
+        }
+      ]
+    },
+    semana_4: {
+      title: "Semana 4",
+      logo: "./assets/semana4.png",
+      items: [
+        {
+          section: "Describir temas aprendidos con sus propias palabras",
+          content: `Esta semana se introdujo JavaScript y TypeScript. Se estudiaron variables, operadores, funciones tradicionales, flecha y closures. Además, se abordó cómo manejar el DOM con JavaScript y cómo usar canvas para animaciones (<a href="https://developer.mozilla.org/es/docs/Web/JavaScript" target="_blank">MDN</a>, <a href="https://javascript.info/" target="_blank">JavaScript.info</a>).`
+        },
+        {
+          section: "Ejercicios de laboratorio - Resultados",
+          content: `Se realizó una animación gráfica usando canvas. Se manipuló el DOM para cambiar elementos dinámicamente con JS puro.`
+        },
+        {
+          section: "Reflexión",
+          content: `¿Qué aprendí?: Las bases de la programación con JS y manipulación de elementos DOM.\n¿Cómo aprendí?: Mediante teoría, laboratorio práctico y recursos de Mozilla.`
+        }
+      ]
+    },
+    semana_5: {
+      title: "Semana 5",
+      logo: "./assets/semana5.png",
+      items: [
+        {
+          section: "Describir temas aprendidos con sus propias palabras",
+          content: `Se exploraron fundamentos de <a href="https://react.dev/" target="_blank">React</a>. Se trabajó con componentes funcionales, props y children. Se analizó el uso de JSX como extensión de sintaxis de JavaScript.`
+        },
+        {
+          section: "Ejercicios de laboratorio - Resultados",
+          content: `Se construyeron componentes padres e hijos que intercambian datos usando props. Se reforzó la comprensión de componentes anidados.`
+        },
+        {
+          section: "Reflexión",
+          content: `¿Qué aprendí?: La estructura básica de una app React basada en componentes reutilizables.\n¿Cómo aprendí?: A través de ejemplos prácticos, documentación oficial y correcciones del docente.`
+        }
+      ]
+    },
+    semana_6: {
+      title: "Semana 6",
+      logo: "./assets/semana6.png",
+      items: [
+        {
+          section: "Describir temas aprendidos con sus propias palabras",
+          content: `Esta semana se trató el manejo de eventos, renderizado condicional e iterativo y consumo de APIs. Se usó <a href="https://axios-http.com/" target="_blank">Axios</a> para hacer peticiones asíncronas.`
+        },
+        {
+          section: "Ejercicios de laboratorio - Resultados",
+          content: `Se desarrolló una interfaz React que renderiza datos desde una API pública. Se implementaron condicionales y listas dinámicas usando map().`
+        },
+        {
+          section: "Reflexión",
+          content: `¿Qué aprendí?: A conectar frontend con servicios externos y renderizar datos.\n¿Cómo aprendí?: Implementando paso a paso con guía docente y apoyo en foros y Axios.`
+        }
+      ]
+    },
+    semana_7: {
+      title: "Semana 7",
+      logo: "./assets/semana7.png",
+      items: [
+        {
+          section: "Describir temas aprendidos con sus propias palabras",
+          content: `Se estudió el uso de Hooks en React: useState, useEffect, useContext, useRef, useReducer, useCallback y useMemo. También se desarrollaron hooks personalizados para modular lógica. Fuente: <a href="https://react.dev/learn" target="_blank">React Docs</a>.`
+        },
+        {
+          section: "Ejercicios de laboratorio - Resultados",
+          content: `Se implementó una app con múltiples hooks que gestionan estado, efectos secundarios y contexto global. Se refactorizó la lógica repetitiva en hooks personalizados.`
+        },
+        {
+          section: "Reflexión",
+          content: `¿Qué aprendí?: A gestionar el ciclo de vida de componentes de forma declarativa.\n¿Cómo aprendí?: Estudiando casos reales, con acompañamiento docente y la guía oficial de React.`
+        }
+      ]
+    }
+  };
+
+  const cards = document.querySelectorAll(".project__card");
+  const modal = document.getElementById("weekModal");
+  const modalTitle = document.getElementById("modal-week-title");
+  const modalBody = document.getElementById("modal-week-body");
+  const closeBtn = document.querySelector(".close-btn");
+
+  if (!modal || !modalTitle || !modalBody || !closeBtn) {
+    console.warn("Elementos del modal no encontrados.");
+    return;
+  }
+
+  cards.forEach(card => {
+    card.addEventListener("click", () => {
+      const semana = Array.from(card.classList).find(cls => cls.startsWith("semana_"));
+      const data = weekContent[semana];
+
+      if (!data) return;
+
+      modalTitle.innerHTML = `
+        <img src="${data.logo}" alt="${data.title}" width="32" height="32" style="margin-right:8px;">
+        <span>${data.title}</span>
+      `;
+
+      modalBody.innerHTML = data.items.map(item => `
+        <li>
+          <strong>🔹 ${item.section}</strong><br>
+          <span>${item.content.replace(/\n/g, "<br>")}</span>
+        </li>
+      `).join("");
+
+      modal.classList.remove("hidden");
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.classList.add("hidden");
+  });
+
+  window.addEventListener("click", e => {
+    if (e.target === modal) {
+      modal.classList.add("hidden");
+    }
+  });
+});
+</script>
+
+
+
 <script>
     const filterContainer = document.querySelector(".gallery__categories");
     const galleryItems = document.querySelectorAll(".project__card");
@@ -334,5 +514,6 @@
         document.getElementById(sectionId).scrollIntoView({behavior:"smooth"})
     }
 </script>
+
 
 </html>
