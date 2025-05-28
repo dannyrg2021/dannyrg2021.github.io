@@ -463,77 +463,110 @@ footer {
 }
 
 
-
 .modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.75);
-    z-index: 9999;
-}
-
-
-
-.modal-content {
-    background-color: #8800ff;
-    color: #f0f0f0;
-    padding: 2rem;
-    border-radius: 12px;
-    max-width: 600px;
-    width: 90%;
-    position: relative;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    font-family: var(--font);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 9999;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
 .modal.hidden {
-    display: none;
+  display: none;
 }
 
-
+.modal-content {
+  background-color: #28222c;
+  color: #f0f0f0;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 640px;
+  width: 90%;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  font-family: var(--font);
+  position: relative;
+  animation: slideUp 0.4s ease-in-out;
+}
 
 .close-btn {
-    position: absolute;
-    top: 1rem;
-    right: 1.25rem;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #aaa;
-    transition: color 0.2s ease-in-out;
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #bbb;
+  transition: color 0.2s ease-in-out;
 }
 .close-btn:hover {
-    color: #fff;
+  color: #fff;
 }
 
-
-
 #modal-week-title {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+#modal-week-title img {
+  width: 32px;
+  height: 32px;
 }
 
 #modal-week-body li {
-    margin-bottom: 1rem;
-    line-height: 1.6;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  font-size: 0.95rem;
 }
 
 #modal-week-body strong {
-    color: #50fa7b; /* verde claro brillante */
+  color: #50fa7b;
+  font-weight: 500;
 }
 
 #modal-week-body span {
-    display: block;
-    margin-top: 0.3rem;
-    color: #ccc;
+  display: block;
+  margin-top: 0.4rem;
+  color: #d0d0d0;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .modal-content {
+    padding: 1.5rem;
+  }
+
+  #modal-week-title {
+    font-size: 1.3rem;
+  }
+
+  #modal-week-body li {
+    font-size: 0.85rem;
+  }
+}
 
 
