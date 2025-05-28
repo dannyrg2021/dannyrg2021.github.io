@@ -337,8 +337,10 @@ body::-webkit-scrollbar-track {
     cursor: pointer;
 }
 .gallery__categories .filter-item.active {
-    border-bottom: 1px solid var(--secondary-bg-color);
+    border-bottom: 2px solid var(--secondary-bg-color); /* o el color púrpura que usas */
+    color: #fff;
 }
+
 
 .project__card {
     width: 300px;
@@ -459,3 +461,79 @@ footer {
     font-size: 0.9rem;
     color: #a3a3a3;
 }
+
+
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 9999;
+}
+
+
+
+.modal-content {
+    background-color: #8800ff;
+    color: #f0f0f0;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    font-family: var(--font);
+}
+
+.modal.hidden {
+    display: none;
+}
+
+
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #aaa;
+    transition: color 0.2s ease-in-out;
+}
+.close-btn:hover {
+    color: #fff;
+}
+
+
+
+#modal-week-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+#modal-week-body li {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+#modal-week-body strong {
+    color: #50fa7b; /* verde claro brillante */
+}
+
+#modal-week-body span {
+    display: block;
+    margin-top: 0.3rem;
+    color: #ccc;
+}
+
+
+
+
