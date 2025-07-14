@@ -1,0 +1,88 @@
+:root {
+  --bg-color: #000;
+  --text-color: #f1f1f1;
+  --accent-color: #ff4900;
+  --link-color: #50aaff;
+  --link-hover: #ffffff;
+  --font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  line-height: 1.6;
+}
+
+.week__container {
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.week__title {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--accent-color);
+}
+
+.week__image {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.week__image img {
+  width: 160px;
+  height: auto;
+  filter: drop-shadow(0 0 5px #ff4900aa);
+  border-radius: 10px;
+}
+
+.week__section {
+  margin-bottom: 2rem;
+}
+
+.week__section h2 {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.week__section p {
+  color: var(--text-color);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.week__section a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.week__section a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+.week__back-link {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.week__back-link a {
+  color: var(--link-color);
+  border: 1px solid var(--accent-color);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.week__back-link a:hover {
+  background-color: var(--accent-color);
+  color: #000;
+}
