@@ -19,17 +19,25 @@ Este sitio ha sido desarrollado con las siguientes tecnologías:
 
 ## 📂 Estructura del sitio
 
-- `index.html`: página principal con todas las secciones.
-- `style.css`: hoja de estilos principal, personalizada con variables CSS.
-- `/assets`: carpeta con imágenes, CV y logos.
+- `index.html`: Página principal con todas las secciones.
+- `style.css`: Hoja de estilos principal.
+- `/weeks`: Carpeta que contiene el detalle de cada semana (`semanaX.html`).
+- `/assets`: Imágenes, logos representativos y recursos visuales.
+- `/weeks/styles_weeks.css`: Estilos específicos para las páginas semanales.
 
 ## ✨ Contenido destacado
 
-- **Inicio** con presentación personal.
-- **Sobre mí** con habilidades técnicas y progreso.
-- **Servicios** ofrecidos como freelancer.
-- **Cuaderno** con resumen semanal de aprendizaje.
-- **Contacto** con enlaces y redes sociales.
+- **Inicio**: Presentación personal.
+- **Sobre mí**: Habilidades técnicas, herramientas dominadas y progreso profesional.
+- **Servicios**: Portafolio de servicios ofrecidos como freelancer.
+- **Cuaderno**: Sección semanal del progreso formativo con:
+  - Fundamentos web
+  - HTML y CSS
+  - Frameworks modernos
+  - JavaScript y React
+  - Backend (PHP, JSP, Django)
+  - Python, APIs REST, Microservicios
+- **Contacto**: Enlaces, redes y formas de contacto directo.
 
 ---
 
